@@ -18,6 +18,12 @@ export class CardService{
       image:"../../../assets/images/cardImage3.jpg",
       description:"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero autem in tempore, aliquam porro quis officia iste ea aut minus?",
       cardUrl:"https://www.towa-digital.com/"
+    },
+    {
+      title: "Card 4",
+      image:"../../../assets/images/cardImage4.jpg",
+      description:"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero autem in tempore, aliquam porro quis officia iste ea aut minus?",
+      cardUrl:"https://www.towa-digital.com/"
     }
   ]
 
