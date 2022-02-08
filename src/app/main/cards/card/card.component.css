@@ -1,0 +1,16 @@
+img {
+  border-radius: 100%;
+  padding-top: 25px;
+  width: 125px;
+  height: 125px;
+}
+*{
+  font-family: 'Ubuntu', sans-serif;
+  
+}
+p{
+  font-size: 35px;
+}
+#email{
+  font-size: 20px;
+}

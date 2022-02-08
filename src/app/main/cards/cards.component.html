@@ -1,6 +1,6 @@
 
-<section class="py-5">
-  <div class="container">
+<section id="main-section" class="py-5">
+  <div id="main-inner" class="container">
     <div class="row">
   <div class="col-12 col-sm-12 col-lg-4 col-md-6 my-5" *ngFor="let user of users">
     <app-card [email]="user.email" [lastName]="user.last_name" [firstName]="user.first_name" [image]="user.avatar">
