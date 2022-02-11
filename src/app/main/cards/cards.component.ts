@@ -1,9 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { SearchService } from 'src/app/search.service';
-import { UserInfo, UserService } from './user.service';
-import {filter} from 'rxjs/operators';
-
-
+import { SearchService } from 'src/app/services/search.service';
+import { UserInfo, UserService } from '../../services/user.service';
 
 @Component({
   selector: 'app-cards',
