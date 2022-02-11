@@ -13,12 +13,36 @@ import {filter} from 'rxjs/operators';
 })
 export class CardsComponent implements OnInit {
 users:UserInfo[]=[]
+searchTerm: string="";
    constructor(private _userService: UserService, private searchService: SearchService) {
    }
   ngOnInit(): void {
-    this._userService.getUsersData().subscribe(res => {
-      this.users = res.data;      
+    this.getData(); 
+  this.searchService.getSearchObservable().
+  subscribe(searchInput=> {
+    if(searchInput.length>=3){
+      this.searchTerm= searchInput;
+    }
+    else{
+      this.searchTerm=""
+    }
+    
+    this.search();   
   });
-  this.searchService.getSearchObservable().pipe(filter(text => text.length >=3)).subscribe(value=> console.log(value));
+}
+  private getData() {
+    this._userService.getUsersData().subscribe(res => {
+      this.users = res.data;
+    });
+  }
+
+search(){
+  if(this.searchTerm==""){
+    this.getData();
+  }else{
+    this.users = this.users.filter(res=>{
+      return res.first_name?.toLocaleLowerCase().match(this.searchTerm.toLocaleLowerCase());
+    })
+  }
 }
 }

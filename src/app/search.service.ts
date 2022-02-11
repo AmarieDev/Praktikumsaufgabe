@@ -10,7 +10,7 @@ searchObservable: Observable<any>;
   setSearchObservable(observable: Observable<any>){
     this.searchObservable= observable;
   }
- 
+  
   getSearchObservable(): Observable<any>{
       return this.searchObservable;
   }

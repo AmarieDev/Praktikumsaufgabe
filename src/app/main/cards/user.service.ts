@@ -6,9 +6,9 @@ import { Injectable } from '@angular/core';
 export interface UserInfo{
   id: number;
   email: string;
-  firstName: string;
-  lastName: string;
-  imageUrl: string; 
+  first_name: string;
+  last_name: string;
+  avatar: string; 
 }
 
 export interface resultData{
@@ -21,6 +21,6 @@ export class UserService{
 
   }
   getUsersData():Observable<resultData>{
-    return this._http.get<resultData>('https://reqres.in/api/users?page=2')
+    return this._http.get<resultData>('https://reqres.in/api/users?page=1')
   }
 }
