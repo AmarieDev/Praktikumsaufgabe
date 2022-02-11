@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { SearchService } from 'src/app/search.service';
 import { UserInfo, UserService } from './user.service';
+import {filter} from 'rxjs/operators';
 
 
 
@@ -11,12 +13,12 @@ import { UserInfo, UserService } from './user.service';
 })
 export class CardsComponent implements OnInit {
 users:UserInfo[]=[]
-   constructor(private _userService: UserService) {
+   constructor(private _userService: UserService, private searchService: SearchService) {
    }
   ngOnInit(): void {
     this._userService.getUsersData().subscribe(res => {
-      this.users = res.data;
-      console.log(res.data);
-  })
+      this.users = res.data;      
+  });
+  this.searchService.getSearchObservable().pipe(filter(text => text.length >=3)).subscribe(value=> console.log(value));
 }
 }
