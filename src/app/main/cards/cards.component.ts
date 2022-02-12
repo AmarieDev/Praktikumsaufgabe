@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { element } from 'protractor';
 import { SearchService } from 'src/app/services/search.service';
 import { UserInfo, UserService } from '../../services/user.service';
 
@@ -37,8 +38,11 @@ search(){
   if(this.searchTerm==""){
     this.getData();
   }else{
+    this.users.forEach(res=>{
+    })
     this.users = this.users.filter(res=>{
-      return res.first_name?.toLocaleLowerCase().match(this.searchTerm.toLocaleLowerCase());
+      let fullName = res.first_name+ " " + res.last_name
+      return fullName?.toLocaleLowerCase().match(this.searchTerm.trim().toLocaleLowerCase());
     })
   }
 }
