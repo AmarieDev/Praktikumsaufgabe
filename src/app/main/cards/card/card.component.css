@@ -1,16 +1,25 @@
 img {
   border-radius: 100%;
-  padding-top: 25px;
-  width: 125px;
-  height: 125px;
+  padding-bottom: 20px;
+  height: 230px;
+  width: 230px;
+    
 }
 *{
   font-family: 'Ubuntu', sans-serif;
   
 }
-p{
-  font-size: 35px;
+#fullName{
+  font-size: 1rem;
 }
 #email{
-  font-size: 20px;
+  font-size: 15px;
+}
+.card{
+  border-radius: 5%;
+  max-width:80vmin;
+  min-width: 300px;
+  height: 400px;
+  justify-content:space-evenly;
+  margin-inline-end: 10px;
 }
