@@ -17,20 +17,18 @@ h5{
   min-width: 300px;
   height: 400px;
   justify-content:space-evenly;
-  transition: transform 500ms ease;
+  transition: transform 250ms ease;
   font-weight: bold;
+  background-color: #4B3F72;
 }
 .card-body{
   color:white;
-  
 }
 
 .card:hover{
   transform: scale(1.04);
-  background: black;
+  background: #1F2041;
   letter-spacing: 0.5px;
- 
-  
 }
 
 

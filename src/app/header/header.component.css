@@ -1,3 +1,12 @@
 *{
   font-family: 'Supermercado One', cursive;
 }
+.navbar{
+  background-color: #1F2041;
+}
+a{
+  color: #FFC857;
+}
+.nav-link:hover{
+  color: #119DA4;
+}
